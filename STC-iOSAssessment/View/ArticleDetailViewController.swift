@@ -2,8 +2,8 @@
 //  ArticleDetailViewController.swift
 //  STC-iOSAssessment
 //
-//  Created by Hari Priyanka on 26/02/19.
-//  Copyright © 2019 Accenture. All rights reserved.
+//  Created by Dev on 26/02/19.
+//  Copyright © 2019 DevApp. All rights reserved.
 //
 
 import UIKit
