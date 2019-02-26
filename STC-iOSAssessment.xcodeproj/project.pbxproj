@@ -12,6 +12,14 @@
 		DEB64257222546A500B5F17F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB64255222546A500B5F17F /* Main.storyboard */; };
 		DEB64259222546B300B5F17F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB64258222546B300B5F17F /* Assets.xcassets */; };
 		DEB6425C222546B300B5F17F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB6425A222546B300B5F17F /* LaunchScreen.storyboard */; };
+		DEB642692225474300B5F17F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB642682225474300B5F17F /* NetworkManager.swift */; };
+		DEB6426B2225475900B5F17F /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6426A2225475900B5F17F /* ArticleModel.swift */; };
+		DEB6426D2225476500B5F17F /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6426C2225476500B5F17F /* ArticleViewModel.swift */; };
+		DEB6426F2225477D00B5F17F /* ArticlesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6426E2225477D00B5F17F /* ArticlesListViewController.swift */; };
+		DEB642712225479300B5F17F /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB642702225479300B5F17F /* ArticleDetailViewController.swift */; };
+		DEB64277222556CB00B5F17F /* ArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB64276222556CB00B5F17F /* ArticleListCell.swift */; };
+		DEB6427B2225644000B5F17F /* ArticleDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6427A2225644000B5F17F /* ArticleDataManager.swift */; };
+		DEB6427F222586EA00B5F17F /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6427E222586EA00B5F17F /* ArticleDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		DEB64258222546B300B5F17F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEB6425B222546B300B5F17F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEB6425D222546B300B5F17F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEB642682225474300B5F17F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DEB6426A2225475900B5F17F /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		DEB6426C2225476500B5F17F /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		DEB6426E2225477D00B5F17F /* ArticlesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListViewController.swift; sourceTree = "<group>"; };
+		DEB642702225479300B5F17F /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		DEB64276222556CB00B5F17F /* ArticleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListCell.swift; sourceTree = "<group>"; };
+		DEB6427A2225644000B5F17F /* ArticleDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDataManager.swift; sourceTree = "<group>"; };
+		DEB6427E222586EA00B5F17F /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,10 @@
 		DEB64250222546A500B5F17F /* STC-iOSAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				DEB642672225472800B5F17F /* Utilities */,
+				DEB64263222546FD00B5F17F /* Model */,
+				DEB642662225472200B5F17F /* ViewModel */,
+				DEB642642225470300B5F17F /* View */,
 				DEB64251222546A500B5F17F /* AppDelegate.swift */,
 				DEB64253222546A500B5F17F /* ViewController.swift */,
 				DEB64255222546A500B5F17F /* Main.storyboard */,
@@ -62,6 +82,42 @@
 				DEB6425D222546B300B5F17F /* Info.plist */,
 			);
 			path = "STC-iOSAssessment";
+			sourceTree = "<group>";
+		};
+		DEB64263222546FD00B5F17F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEB6426A2225475900B5F17F /* ArticleModel.swift */,
+				DEB6427A2225644000B5F17F /* ArticleDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEB642642225470300B5F17F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEB6426E2225477D00B5F17F /* ArticlesListViewController.swift */,
+				DEB642702225479300B5F17F /* ArticleDetailViewController.swift */,
+				DEB64276222556CB00B5F17F /* ArticleListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEB642662225472200B5F17F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DEB6426C2225476500B5F17F /* ArticleViewModel.swift */,
+				DEB6427E222586EA00B5F17F /* ArticleDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DEB642672225472800B5F17F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DEB642682225474300B5F17F /* NetworkManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB6427B2225644000B5F17F /* ArticleDataManager.swift in Sources */,
+				DEB64277222556CB00B5F17F /* ArticleListCell.swift in Sources */,
+				DEB642692225474300B5F17F /* NetworkManager.swift in Sources */,
 				DEB64254222546A500B5F17F /* ViewController.swift in Sources */,
+				DEB6426F2225477D00B5F17F /* ArticlesListViewController.swift in Sources */,
+				DEB642712225479300B5F17F /* ArticleDetailViewController.swift in Sources */,
+				DEB6426B2225475900B5F17F /* ArticleModel.swift in Sources */,
+				DEB6426D2225476500B5F17F /* ArticleViewModel.swift in Sources */,
+				DEB6427F222586EA00B5F17F /* ArticleDetailViewModel.swift in Sources */,
 				DEB64252222546A500B5F17F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
