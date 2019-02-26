@@ -3,7 +3,7 @@
 //  STC-iOSAssessment
 //
 //  Created by Dev on 26/02/19.
-//  Copyright © 2019 DevApp. All rights reserved.
+//  Copyright © 2019 DevApp.  All rights reserved.
 //
 
 import UIKit
