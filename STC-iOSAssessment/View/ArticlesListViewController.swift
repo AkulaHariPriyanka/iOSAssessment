@@ -78,7 +78,8 @@ class ArticlesListViewController: UIViewController, UITableViewDataSource, UITab
  Extension for loading the articles data in table view
  */
 extension ArticlesListViewController: ViewModelDelegate {
-        
+    
+    // ViewModel delegate method which reloads the data
     func didLoadData(title:String) {
         self.navigationItem.title = title
             tableView.reloadData()
