@@ -7,18 +7,23 @@
 //
 
 import Foundation
+
+/**
+ ArticleDetail ViewModel Delegate for setting selected article
+ */
 protocol ArticleDetailViewModelDelegate {
     var selectedArticle: ArticleModel?  { get }
     func setSelectedArticle (article : ArticleModel)
 }
 
+/**
+ ArticleDetail ViewModel for binding data in Article Detail view
+ */
 class ArticleDetailViewModel : ArticleDetailViewModelDelegate {
     
     var selectedArticle: ArticleModel?
     
-    
     func setSelectedArticle (article : ArticleModel) {
         selectedArticle = article
     }
-    
 }

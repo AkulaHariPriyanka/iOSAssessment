@@ -17,26 +17,26 @@ class ArticlesListViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        model = ArticleViewModel()
         self.cache = NSCache()
-
+        
+        // Sets model delegate and fetches articles data from server
+        model = ArticleViewModel()
         model.delegate = self
-        // Do any additional setup after loading the view.
-  
         model.fetchArticleData()
+        
+        // Do any additional setup after loading the view.
+        
     }
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // on selecting cell row, navigates to details view of selected article
         if (segue.identifier == "detailSegue") {
             
             let row = tableView.indexPathForSelectedRow?.row
             if let row = row {
                 let detailVC = segue.destination as? ArticleDetailViewController
-//                detailVC?.selectedArticle = model?.articles[row]
                 detailVC?.model = ArticleDetailViewModel()
-            
                 detailVC?.model.setSelectedArticle(article: (model?.articles[row])!)
             }
         }
@@ -56,19 +56,16 @@ class ArticlesListViewController: UIViewController, UITableViewDataSource, UITab
         cell?.titleLabel.text = article!.title
         cell?.contentLabel.text = article!.content
         
-        /*
-         Setting a placeholder image for all the image cells.
-         */
+        // Sets a placeholder image for all the image cells.
+ 
         cell?.articleImageView?.image = UIImage(named: "article-placeholder.png")
         
-        /*
-         Loading the already cached image if exists.
-         */
+        // Loading the already cached image if exists.
+
         if (self.cache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) != nil){
             cell?.articleImageView?.image = self.cache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) as? UIImage
-        } /*
-             Image not available in cache, downloads the images only for visible cells.
-             */
+        }
+        // If Image is not available in cache, downloads the images only for visible cells.
         else {
             model?.configureImageCacheCell(cell: cell!, article: article!, tableView: tableView, indexPath: indexPath as NSIndexPath, cache: cache)
         }
@@ -76,6 +73,10 @@ class ArticlesListViewController: UIViewController, UITableViewDataSource, UITab
         return cell!
     }
 }
+
+/**
+ Extension for loading the articles data in table view
+ */
 extension ArticlesListViewController: ViewModelDelegate {
         
     func didLoadData(title:String) {

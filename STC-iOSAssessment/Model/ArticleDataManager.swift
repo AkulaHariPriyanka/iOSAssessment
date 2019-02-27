@@ -12,8 +12,8 @@ struct ArticleDataManager {
     
     static private let articleURL = URL(string: "https://no89n3nc7b.execute-api.ap-southeast-1.amazonaws.com/staging/exercise")
     
-    /*
-     Fetches title and articles and sends back to the calling View Controller.
+    /**
+     Fetches title,articles from API and sends data
      */
     static func fetchArticleDetails (completion: @escaping (String,[ArticleModel]) -> Void) {
         if let articleURL = articleURL {
@@ -30,7 +30,7 @@ struct ArticleDataManager {
     }
     
     /*
-     Parses the json data as DataModel and sends back title and list of sorted articles.
+     Parses the json data as DataModel and sends title and list of sorted articles.
      */
     static private func parseArticleDetails(jsonData: Data?) -> (String?, [ArticleModel]?)  {
         

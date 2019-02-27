@@ -22,8 +22,11 @@ class ArticleDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 
+        // Displays the selected article details
         self.titleLabel.text = model.selectedArticle?.title
         self.descLabel.text = model.selectedArticle?.content
+        
+        // loads the selected article image
         if let urlString = model.selectedArticle?.image_url {
             if let url = URL(string: urlString) {
                 if let imageData = NSData(contentsOf: url) as Data? {

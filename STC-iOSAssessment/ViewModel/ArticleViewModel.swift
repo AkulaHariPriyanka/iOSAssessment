@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+/**
+ Article view model delegate for fetching data and configuring image
+ */
 protocol ArticleViewModelDelegate {
     var delegate: ViewModelDelegate? { get set }
     var articles: [ArticleModel]  { get }
@@ -16,10 +19,16 @@ protocol ArticleViewModelDelegate {
     func configureImageCacheCell(cell : ArticleListCell,article : ArticleModel, tableView : UITableView, indexPath : NSIndexPath,cache:NSCache<AnyObject, AnyObject>)
 }
 
+/**
+ View model delegate for loading articles list data
+ */
 protocol ViewModelDelegate: class {
     func didLoadData(title:String)
 }
 
+/**
+ Article View model for binding data in article list view controller
+ */
 class ArticleViewModel : ArticleViewModelDelegate {
     var articles: [ArticleModel] = []
     
@@ -35,6 +44,7 @@ class ArticleViewModel : ArticleViewModelDelegate {
         }
     }
     
+    // updates the image in the cell
     func configureImageCacheCell(cell : ArticleListCell, article : ArticleModel, tableView : UITableView, indexPath : NSIndexPath,cache:NSCache<AnyObject, AnyObject>)  {
         
         let session = URLSession.shared
@@ -46,9 +56,7 @@ class ArticleViewModel : ArticleViewModelDelegate {
             if let url = url {
                 task = session.downloadTask(with: url, completionHandler: { (data, response, error) -> Void in
                     if let data = try? Data(contentsOf: url){
-                        /*
-                         Updates the cell images in the main thread.
-                         */
+                        // Updates the cell images in the main thread.
                         DispatchQueue.main.async(execute: { () -> Void in
                             if let updateCell = tableView.cellForRow(at: indexPath as IndexPath) as? ArticleListCell {
                                 let img:UIImage! = UIImage(data: data)
