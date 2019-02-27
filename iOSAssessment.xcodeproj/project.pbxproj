@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DEB6424E222546A500B5F17F /* STC-iOSAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STC-iOSAssessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEB6424E222546A500B5F17F /* iOSAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB64251222546A500B5F17F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB64253222546A500B5F17F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DEB64256222546A500B5F17F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		DEB64245222546A400B5F17F = {
 			isa = PBXGroup;
 			children = (
-				DEB64250222546A500B5F17F /* STC-iOSAssessment */,
+				DEB64250222546A500B5F17F /* iOSAssessment */,
 				DEB6424F222546A500B5F17F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,12 +62,12 @@
 		DEB6424F222546A500B5F17F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DEB6424E222546A500B5F17F /* STC-iOSAssessment.app */,
+				DEB6424E222546A500B5F17F /* iOSAssessment.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DEB64250222546A500B5F17F /* STC-iOSAssessment */ = {
+		DEB64250222546A500B5F17F /* iOSAssessment */ = {
 			isa = PBXGroup;
 			children = (
 				DEB642672225472800B5F17F /* Utilities */,
@@ -81,7 +81,7 @@
 				DEB6425A222546B300B5F17F /* LaunchScreen.storyboard */,
 				DEB6425D222546B300B5F17F /* Info.plist */,
 			);
-			path = "STC-iOSAssessment";
+			path = iOSAssessment;
 			sourceTree = "<group>";
 		};
 		DEB64263222546FD00B5F17F /* Model */ = {
@@ -123,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DEB6424D222546A500B5F17F /* STC-iOSAssessment */ = {
+		DEB6424D222546A500B5F17F /* iOSAssessment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DEB64260222546B300B5F17F /* Build configuration list for PBXNativeTarget "STC-iOSAssessment" */;
+			buildConfigurationList = DEB64260222546B300B5F17F /* Build configuration list for PBXNativeTarget "iOSAssessment" */;
 			buildPhases = (
 				DEB6424A222546A500B5F17F /* Sources */,
 				DEB6424B222546A500B5F17F /* Frameworks */,
@@ -135,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = "STC-iOSAssessment";
+			name = iOSAssessment;
 			productName = "STC-iOSAssessment";
-			productReference = DEB6424E222546A500B5F17F /* STC-iOSAssessment.app */;
+			productReference = DEB6424E222546A500B5F17F /* iOSAssessment.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -155,7 +155,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DEB64249222546A500B5F17F /* Build configuration list for PBXProject "STC-iOSAssessment" */;
+			buildConfigurationList = DEB64249222546A500B5F17F /* Build configuration list for PBXProject "iOSAssessment" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -168,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DEB6424D222546A500B5F17F /* STC-iOSAssessment */,
+				DEB6424D222546A500B5F17F /* iOSAssessment */,
 			);
 		};
 /* End PBXProject section */
@@ -348,12 +348,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "STC-iOSAssessment/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iOSAssessment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.accentureDev.STC-iOSAssessment";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.iOSAssessment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -367,12 +367,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "STC-iOSAssessment/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iOSAssessment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.accentureDev.STC-iOSAssessment";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.iOSAssessment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -383,7 +383,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DEB64249222546A500B5F17F /* Build configuration list for PBXProject "STC-iOSAssessment" */ = {
+		DEB64249222546A500B5F17F /* Build configuration list for PBXProject "iOSAssessment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DEB6425E222546B300B5F17F /* Debug */,
@@ -392,7 +392,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DEB64260222546B300B5F17F /* Build configuration list for PBXNativeTarget "STC-iOSAssessment" */ = {
+		DEB64260222546B300B5F17F /* Build configuration list for PBXNativeTarget "iOSAssessment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DEB64261222546B300B5F17F /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  ArticleDataManager.swift
-//  STC-iOSAssessment
+//  iOSAssessment
 //
 //  Created by Dev on 26/02/19.
 //  Copyright © 2019 DevApp. All rights reserved.
