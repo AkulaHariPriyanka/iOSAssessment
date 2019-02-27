@@ -8,19 +8,35 @@
 
 import Foundation
 
-/**
-  Model for the entire JSON data containing title and articles.
+
+/*
+ Model for the entire JSON data containing title and articles.
  */
-struct DataModel : Codable {
+struct DataModel: Codable {
+    
     var title: String?
     var articles: [ArticleModel]?
 }
 
-/**
-  Model for the articles.
+/*
+ Model for the articles.
  */
-struct ArticleModel : Codable {
+struct ArticleModel: Codable {
+    
     var title: String?
+    var website: String?
+    var authors: String?
+    var date: String?
     var content: String?
-    var imageUrl: String?
+    var tag: Tag?
+    var image_url: String?
+}
+
+/*
+ Model for the tags of the articles.
+ */
+struct Tag: Codable {
+    
+    var id: Int?
+    var label: String?
 }

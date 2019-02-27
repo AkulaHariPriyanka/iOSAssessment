@@ -17,7 +17,7 @@ protocol ArticleViewModelDelegate {
 }
 
 protocol ViewModelDelegate: class {
-    func didLoadData()
+    func didLoadData(title:String)
 }
 
 class ArticleViewModel : ArticleViewModelDelegate {
@@ -30,7 +30,7 @@ class ArticleViewModel : ArticleViewModelDelegate {
         ArticleDataManager.fetchArticleDetails { (title,articlesArray) in
             self.articles = articlesArray
             DispatchQueue.main.async {
-                self.delegate?.didLoadData()
+                self.delegate?.didLoadData(title: title)
             }
         }
     }
@@ -40,7 +40,7 @@ class ArticleViewModel : ArticleViewModelDelegate {
         let session = URLSession.shared
         var task = URLSessionDownloadTask()
         
-        let articleUrl = article.imageUrl
+        let articleUrl = article.image_url
         if let articleUrl = articleUrl {
             let url = URL.init(string: articleUrl)
             if let url = url {
