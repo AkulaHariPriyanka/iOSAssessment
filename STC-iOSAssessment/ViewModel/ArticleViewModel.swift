@@ -45,7 +45,7 @@ class ArticleViewModel : ArticleViewModelDelegate {
     }
     
    /**
-     Updates the image in the cell
+     Congigures the image in the cell
      */
     func configureImageCacheCell(cell : ArticleListCell, article : ArticleModel, tableView : UITableView, indexPath : NSIndexPath,cache:NSCache<AnyObject, AnyObject>)  {
         
