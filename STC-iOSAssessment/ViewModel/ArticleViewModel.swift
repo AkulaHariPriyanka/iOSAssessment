@@ -44,7 +44,9 @@ class ArticleViewModel : ArticleViewModelDelegate {
         }
     }
     
-    // updates the image in the cell
+   /**
+     Updates the image in the cell
+     */
     func configureImageCacheCell(cell : ArticleListCell, article : ArticleModel, tableView : UITableView, indexPath : NSIndexPath,cache:NSCache<AnyObject, AnyObject>)  {
         
         let session = URLSession.shared
